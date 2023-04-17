@@ -28,7 +28,7 @@
       getCards(){
         const url = store.baseUrl + store.endpoint;
         axios.get(url).then((res) =>{
-          store.cardList = res.data.result;
+          store.cardList = res.data.data;
         })
 
       }

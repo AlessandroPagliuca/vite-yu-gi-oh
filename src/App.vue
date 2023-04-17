@@ -1,7 +1,7 @@
 <template>
   <HeaderComponent title="Yu-Gi-Oh Api"/>
   <main class="bg-warning">
-    <!--<SrcFilterComponent />-->
+    <SrcFilterComponent />
     <CardsList />
   </main>
 </template>
@@ -17,7 +17,7 @@
     components:{
       HeaderComponent,
       CardsList,
-      SrcFilterComponent
+      SrcFilterComponent,
     },
     data(){
       return{
@@ -26,7 +26,7 @@
     },
     methods:{
       getCards(){
-        const url = store.baseUrl;
+        const url = store.baseUrl + store.endpoint;
         axios.get(url).then((res) =>{
           store.cardList = res.data.data;
         });
@@ -35,6 +35,7 @@
      
     },
     mounted() {
+      store.endpoint = '';
     this.getCards();
    }
       

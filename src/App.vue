@@ -26,16 +26,15 @@
     },
     methods:{
       getCards(){
-        const url = store.baseUrl + store.endpoint;
+        const url = store.baseUrl;
         axios.get(url).then((res) =>{
           store.cardList = res.data.data;
-        })
+        });
 
       }
      
     },
     mounted() {
-      store.endpoint = 'name';
     this.getCards();
    }
       

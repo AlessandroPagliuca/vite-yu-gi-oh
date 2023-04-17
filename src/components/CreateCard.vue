@@ -1,9 +1,11 @@
 <template>
-    <div class="col-12 col-sm-6 col-md-4">
-        <div class="card bg-warning">
-            <img :src="c92card.card_images[count].image_url" >
-            <h4>{{ c92card.name }}</h4>
-            <div class="font-weight-bold">{{ c92card.archetype }}</div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+        <div class="card bg-warning" >
+            <img class="card-img-top" :src="c92card.card_images[count].image_url" >
+            <div class="card-body text-center">
+                <h4 class="card-title">{{ c92card.name }}</h4>
+                <div class="font-weight-bold card-text">{{ c92card.archetype }}</div>
+            </div>
         </div>
 
     </div>

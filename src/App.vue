@@ -1,6 +1,6 @@
 <template>
   <HeaderComponent title="Yu-Gi-Oh Api"/>
-  <main>
+  <main class="bg-warning">
     <!--<SrcFilterComponent />-->
     <CardsList />
   </main>

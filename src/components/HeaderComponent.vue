@@ -10,7 +10,9 @@
 
     export default {
         name: 'HeadeComponent',
-        props: [title],
+        props: {
+            tilte: String,
+        },
     }
 </script>
 

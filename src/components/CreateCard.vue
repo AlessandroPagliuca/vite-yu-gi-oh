@@ -1,6 +1,6 @@
 <template>
     <div class="col-12 col-sm-6 col-md-4">
-        <div class="c92card text-center">
+        <div class=" text-center">
             <img :src="c92card.image" :alt="c92card.name">
             <h4>{{ c92card.name }}</h4>
             <div>{{ c92card.status }}</div>

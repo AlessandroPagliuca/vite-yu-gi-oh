@@ -1,7 +1,7 @@
 <template>
    
     <div class="row">
-        <CreateCard v-for="(card, index) in store."/>
+        <CreateCard v-for="(c92card, index) in store.cardList" :key="c92card.id" :c92card="c92card"/>
 
     </div>
 

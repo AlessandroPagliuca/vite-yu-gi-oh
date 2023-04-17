@@ -2,6 +2,7 @@
   <HeaderComponent title="Yu-Gi-Oh Api"/>
   <main>
     <!--<SrcFilterComponent />-->
+    <CardsList />
   </main>
 </template>
 
@@ -10,10 +11,12 @@
   import axios from 'axios';
   import HeaderComponent from './components/HeaderComponent.vue';
   import SrcFilterComponent from './components/SrcFilterComponent.vue';
+  import CardsList from './components/CardsList.vue';
   export default {
     name: 'App',
     components:{
       HeaderComponent,
+      CardsList,
       SrcFilterComponent
     },
     data(){
@@ -23,14 +26,19 @@
     },
     methods:{
       getCards(){
-        const url = store.baseUrl;
+        const url = store.baseUrl + store.endpoint;
         axios.get(url).then((res) =>{
           store.cardList = res.data.result;
         })
+
       }
      
-    }
-    
+    },
+    mounted() {
+      store.endpoint = 'name';
+    this.getCards();
+   }
+      
   }
 </script>
 

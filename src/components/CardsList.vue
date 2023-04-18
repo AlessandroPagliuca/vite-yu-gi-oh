@@ -4,7 +4,7 @@
     <div class="row justify-content-center gap-3">
          <!--counter delle carte visualizzate in pagina-->
         <CounterComponent />
-        <CreateCard v-for="(c92card, index) in store.cardList" :key="c92card.id" :c92card="c92card"/>
+        <CreateCard v-for="c92card in store.cardList" :c92card="c92card"/>
     </div>
 
    </div>
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import {store} from '../data/store'
+import { store } from '../data/store'
 import CreateCard from './CreateCard.vue';
 import CounterComponent from './CounterComponent.vue';
     export default {

@@ -35,7 +35,7 @@
      
     },
     mounted() {
-      store.endpoint = '';
+      store.endpoint = '?num=50&offset=0';
     this.getCards();
    }
       

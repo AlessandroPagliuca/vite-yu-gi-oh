@@ -4,8 +4,8 @@
         <label  for="cardArchetype" class="text-uppercase text-dark fw-semibold">Search for archetype</label>
         <select  id="cardArchetype" v-model="store.search.archetype">
             <option  selected value="">Search</option>
-            <option :value="archetype">
-                {{ archetype }}
+            <option :value="archetype.archetype_name" v-for="archetype in statusArchetypes">
+                {{ archetype.archetype_name }}
             </option>
         </select>
     </div>
